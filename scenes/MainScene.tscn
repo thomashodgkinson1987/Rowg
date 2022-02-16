@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/Scenes/MainScene.cs" type="Script" id=1]
+[ext_resource path="res://packed_scenes/maps/Map.tscn" type="PackedScene" id=2]
+[ext_resource path="res://packed_scenes/map_chunks/MapChunk_0002.tscn" type="PackedScene" id=3]
+[ext_resource path="res://packed_scenes/map_chunks/MapChunk_0001.tscn" type="PackedScene" id=4]
+[ext_resource path="res://packed_scenes/tiles/PlayerTile.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Map" parent="." instance=ExtResource( 2 )]
+
+[node name="MapChunk_0001" parent="Map" instance=ExtResource( 4 )]
+
+[node name="MapChunk_0002" parent="Map" instance=ExtResource( 4 )]
+position = Vector2( 320, 0 )
+
+[node name="MapChunk_0003" parent="Map" instance=ExtResource( 3 )]
+position = Vector2( 0, 320 )
+
+[node name="MapChunk_0004" parent="Map" instance=ExtResource( 3 )]
+position = Vector2( 320, 320 )
+
+[node name="PlayerTile" parent="." instance=ExtResource( 5 )]
+position = Vector2( 160, 260 )
+
+[connection signal="BoundsChanged" from="Map" to="." method="OnMapBoundsChanged"]
+[connection signal="PositionChanged" from="PlayerTile" to="." method="OnPlayerTilePositionChanged"]

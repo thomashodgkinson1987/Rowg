@@ -1,0 +1,213 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://packed_scenes/map_chunks/MapChunk.tscn" type="PackedScene" id=1]
+[ext_resource path="res://packed_scenes/tiles/EnemyTile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://packed_scenes/tiles/WallTile.tscn" type="PackedScene" id=7]
+[ext_resource path="res://packed_scenes/tiles/DoorTile.tscn" type="PackedScene" id=9]
+[ext_resource path="res://packed_scenes/tiles/FloorTile.tscn" type="PackedScene" id=11]
+
+[node name="MapChunk_0001" instance=ExtResource( 1 )]
+
+[node name="FloorTile" parent="FloorTileMapChunkLayer" index="0" instance=ExtResource( 11 )]
+position = Vector2( 100, 100 )
+
+[node name="FloorTile2" parent="FloorTileMapChunkLayer" index="1" instance=ExtResource( 11 )]
+position = Vector2( 120, 100 )
+
+[node name="FloorTile3" parent="FloorTileMapChunkLayer" index="2" instance=ExtResource( 11 )]
+position = Vector2( 140, 100 )
+
+[node name="FloorTile4" parent="FloorTileMapChunkLayer" index="3" instance=ExtResource( 11 )]
+position = Vector2( 160, 100 )
+
+[node name="FloorTile5" parent="FloorTileMapChunkLayer" index="4" instance=ExtResource( 11 )]
+position = Vector2( 180, 100 )
+
+[node name="FloorTile6" parent="FloorTileMapChunkLayer" index="5" instance=ExtResource( 11 )]
+position = Vector2( 200, 100 )
+
+[node name="FloorTile7" parent="FloorTileMapChunkLayer" index="6" instance=ExtResource( 11 )]
+position = Vector2( 100, 120 )
+
+[node name="FloorTile8" parent="FloorTileMapChunkLayer" index="7" instance=ExtResource( 11 )]
+position = Vector2( 120, 120 )
+
+[node name="FloorTile9" parent="FloorTileMapChunkLayer" index="8" instance=ExtResource( 11 )]
+position = Vector2( 140, 120 )
+
+[node name="FloorTile10" parent="FloorTileMapChunkLayer" index="9" instance=ExtResource( 11 )]
+position = Vector2( 160, 120 )
+
+[node name="FloorTile11" parent="FloorTileMapChunkLayer" index="10" instance=ExtResource( 11 )]
+position = Vector2( 180, 120 )
+
+[node name="FloorTile12" parent="FloorTileMapChunkLayer" index="11" instance=ExtResource( 11 )]
+position = Vector2( 200, 120 )
+
+[node name="FloorTile13" parent="FloorTileMapChunkLayer" index="12" instance=ExtResource( 11 )]
+position = Vector2( 100, 140 )
+
+[node name="FloorTile14" parent="FloorTileMapChunkLayer" index="13" instance=ExtResource( 11 )]
+position = Vector2( 120, 140 )
+
+[node name="FloorTile15" parent="FloorTileMapChunkLayer" index="14" instance=ExtResource( 11 )]
+position = Vector2( 140, 140 )
+
+[node name="FloorTile16" parent="FloorTileMapChunkLayer" index="15" instance=ExtResource( 11 )]
+position = Vector2( 160, 140 )
+
+[node name="FloorTile17" parent="FloorTileMapChunkLayer" index="16" instance=ExtResource( 11 )]
+position = Vector2( 180, 140 )
+
+[node name="FloorTile18" parent="FloorTileMapChunkLayer" index="17" instance=ExtResource( 11 )]
+position = Vector2( 200, 140 )
+
+[node name="FloorTile19" parent="FloorTileMapChunkLayer" index="18" instance=ExtResource( 11 )]
+position = Vector2( 100, 160 )
+
+[node name="FloorTile20" parent="FloorTileMapChunkLayer" index="19" instance=ExtResource( 11 )]
+position = Vector2( 120, 160 )
+
+[node name="FloorTile21" parent="FloorTileMapChunkLayer" index="20" instance=ExtResource( 11 )]
+position = Vector2( 140, 160 )
+
+[node name="FloorTile22" parent="FloorTileMapChunkLayer" index="21" instance=ExtResource( 11 )]
+position = Vector2( 160, 160 )
+
+[node name="FloorTile23" parent="FloorTileMapChunkLayer" index="22" instance=ExtResource( 11 )]
+position = Vector2( 180, 160 )
+
+[node name="FloorTile24" parent="FloorTileMapChunkLayer" index="23" instance=ExtResource( 11 )]
+position = Vector2( 200, 160 )
+
+[node name="FloorTile25" parent="FloorTileMapChunkLayer" index="24" instance=ExtResource( 11 )]
+position = Vector2( 100, 180 )
+
+[node name="FloorTile26" parent="FloorTileMapChunkLayer" index="25" instance=ExtResource( 11 )]
+position = Vector2( 120, 180 )
+
+[node name="FloorTile27" parent="FloorTileMapChunkLayer" index="26" instance=ExtResource( 11 )]
+position = Vector2( 140, 180 )
+
+[node name="FloorTile28" parent="FloorTileMapChunkLayer" index="27" instance=ExtResource( 11 )]
+position = Vector2( 160, 180 )
+
+[node name="FloorTile29" parent="FloorTileMapChunkLayer" index="28" instance=ExtResource( 11 )]
+position = Vector2( 180, 180 )
+
+[node name="FloorTile30" parent="FloorTileMapChunkLayer" index="29" instance=ExtResource( 11 )]
+position = Vector2( 200, 180 )
+
+[node name="FloorTile31" parent="FloorTileMapChunkLayer" index="30" instance=ExtResource( 11 )]
+position = Vector2( 100, 200 )
+
+[node name="FloorTile32" parent="FloorTileMapChunkLayer" index="31" instance=ExtResource( 11 )]
+position = Vector2( 120, 200 )
+
+[node name="FloorTile33" parent="FloorTileMapChunkLayer" index="32" instance=ExtResource( 11 )]
+position = Vector2( 140, 200 )
+
+[node name="FloorTile34" parent="FloorTileMapChunkLayer" index="33" instance=ExtResource( 11 )]
+position = Vector2( 160, 200 )
+
+[node name="FloorTile35" parent="FloorTileMapChunkLayer" index="34" instance=ExtResource( 11 )]
+position = Vector2( 180, 200 )
+
+[node name="FloorTile36" parent="FloorTileMapChunkLayer" index="35" instance=ExtResource( 11 )]
+position = Vector2( 200, 200 )
+
+[node name="DoorTile" parent="DoorTileMapChunkLayer" index="0" instance=ExtResource( 9 )]
+position = Vector2( 120, 200 )
+
+[node name="DoorTile3" parent="DoorTileMapChunkLayer" index="1" instance=ExtResource( 9 )]
+position = Vector2( 140, 180 )
+
+[node name="DoorTile5" parent="DoorTileMapChunkLayer" index="2" instance=ExtResource( 9 )]
+position = Vector2( 160, 120 )
+
+[node name="DoorTile6" parent="DoorTileMapChunkLayer" index="3" instance=ExtResource( 9 )]
+position = Vector2( 140, 140 )
+
+[node name="DoorTile7" parent="DoorTileMapChunkLayer" index="4" instance=ExtResource( 9 )]
+position = Vector2( 160, 160 )
+
+[node name="DoorTile2" parent="DoorTileMapChunkLayer" index="5" instance=ExtResource( 9 )]
+position = Vector2( 180, 200 )
+
+[node name="WallTile" parent="WallTileMapChunkLayer" index="0" instance=ExtResource( 7 )]
+position = Vector2( 100, 200 )
+
+[node name="WallTile2" parent="WallTileMapChunkLayer" index="1" instance=ExtResource( 7 )]
+position = Vector2( 100, 180 )
+
+[node name="WallTile3" parent="WallTileMapChunkLayer" index="2" instance=ExtResource( 7 )]
+position = Vector2( 100, 160 )
+
+[node name="WallTile4" parent="WallTileMapChunkLayer" index="3" instance=ExtResource( 7 )]
+position = Vector2( 100, 140 )
+
+[node name="WallTile5" parent="WallTileMapChunkLayer" index="4" instance=ExtResource( 7 )]
+position = Vector2( 100, 120 )
+
+[node name="WallTile6" parent="WallTileMapChunkLayer" index="5" instance=ExtResource( 7 )]
+position = Vector2( 100, 100 )
+
+[node name="WallTile7" parent="WallTileMapChunkLayer" index="6" instance=ExtResource( 7 )]
+position = Vector2( 120, 100 )
+
+[node name="WallTile8" parent="WallTileMapChunkLayer" index="7" instance=ExtResource( 7 )]
+position = Vector2( 140, 100 )
+
+[node name="WallTile9" parent="WallTileMapChunkLayer" index="8" instance=ExtResource( 7 )]
+position = Vector2( 160, 100 )
+
+[node name="WallTile10" parent="WallTileMapChunkLayer" index="9" instance=ExtResource( 7 )]
+position = Vector2( 180, 100 )
+
+[node name="WallTile11" parent="WallTileMapChunkLayer" index="10" instance=ExtResource( 7 )]
+position = Vector2( 200, 100 )
+
+[node name="WallTile12" parent="WallTileMapChunkLayer" index="11" instance=ExtResource( 7 )]
+position = Vector2( 200, 120 )
+
+[node name="WallTile13" parent="WallTileMapChunkLayer" index="12" instance=ExtResource( 7 )]
+position = Vector2( 200, 140 )
+
+[node name="WallTile14" parent="WallTileMapChunkLayer" index="13" instance=ExtResource( 7 )]
+position = Vector2( 200, 160 )
+
+[node name="WallTile15" parent="WallTileMapChunkLayer" index="14" instance=ExtResource( 7 )]
+position = Vector2( 200, 180 )
+
+[node name="WallTile16" parent="WallTileMapChunkLayer" index="15" instance=ExtResource( 7 )]
+position = Vector2( 200, 200 )
+
+[node name="WallTile17" parent="WallTileMapChunkLayer" index="16" instance=ExtResource( 7 )]
+position = Vector2( 160, 200 )
+
+[node name="WallTile18" parent="WallTileMapChunkLayer" index="17" instance=ExtResource( 7 )]
+position = Vector2( 140, 200 )
+
+[node name="EnemyTile" parent="ActorTileMapChunkLayer" index="0" instance=ExtResource( 2 )]
+position = Vector2( 180, 180 )
+
+[node name="EnemyTile2" parent="ActorTileMapChunkLayer" index="1" instance=ExtResource( 2 )]
+position = Vector2( 120, 160 )
+
+[node name="EnemyTile3" parent="ActorTileMapChunkLayer" index="2" instance=ExtResource( 2 )]
+position = Vector2( 120, 120 )
+
+[node name="EnemyTile4" parent="ActorTileMapChunkLayer" index="3" instance=ExtResource( 2 )]
+position = Vector2( 180, 120 )
+
+[node name="EnemyTile5" parent="ActorTileMapChunkLayer" index="4" instance=ExtResource( 2 )]
+position = Vector2( 180, 160 )
+
+[node name="EnemyTile6" parent="ActorTileMapChunkLayer" index="5" instance=ExtResource( 2 )]
+position = Vector2( 120, 140 )
+
+[node name="EnemyTile7" parent="ActorTileMapChunkLayer" index="6" instance=ExtResource( 2 )]
+position = Vector2( 180, 140 )
+
+[node name="EnemyTile8" parent="ActorTileMapChunkLayer" index="7" instance=ExtResource( 2 )]
+position = Vector2( 120, 180 )
