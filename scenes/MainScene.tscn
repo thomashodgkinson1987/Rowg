@@ -818,6 +818,9 @@ position = Vector2( 60, 280 )
 [node name="BedTile5" parent="Map/MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 21 )]
 position = Vector2( 100, 280 )
 
+[node name="FloorHatchTile2" parent="Map/MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 18 )]
+position = Vector2( 100, 200 )
+
 [node name="ItemTileMapChunkLayer" type="Node2D" parent="Map/MapChunk_All"]
 script = ExtResource( 8 )
 __meta__ = {
@@ -1415,8 +1418,5 @@ __meta__ = {
 
 [node name="PlayerTile" parent="." instance=ExtResource( 5 )]
 position = Vector2( 160, 160 )
-
-[node name="FloorHatchTile" parent="." instance=ExtResource( 18 )]
-position = Vector2( 100, 200 )
 
 [connection signal="PositionChanged" from="PlayerTile" to="." method="OnPlayerTilePositionChanged"]
