@@ -9,59 +9,56 @@ public class PlayerTile : ActorTile
 	{
 		if (@event is InputEventKey key)
 		{
-			if (key.Pressed && !key.Echo)
+			int dx = 0;
+			int dy = 0;
+
+			if (key.Scancode == (int)KeyList.Kp1)
 			{
-				int dx = 0;
-				int dy = 0;
+				dx = -1;
+				dy = 1;
+			}
+			else if (key.Scancode == (int)KeyList.Kp2)
+			{
+				dy = 1;
+			}
+			else if (key.Scancode == (int)KeyList.Kp3)
+			{
+				dx = 1;
+				dy = 1;
+			}
+			else if (key.Scancode == (int)KeyList.Kp4)
+			{
+				dx = -1;
+			}
+			else if (key.Scancode == (int)KeyList.Kp5)
+			{
+			}
+			else if (key.Scancode == (int)KeyList.Kp6)
+			{
+				dx = 1;
+			}
+			else if (key.Scancode == (int)KeyList.Kp7)
+			{
+				dx = -1;
+				dy = -1;
+			}
+			else if (key.Scancode == (int)KeyList.Kp8)
+			{
+				dy = -1;
+			}
+			else if (key.Scancode == (int)KeyList.Kp9)
+			{
+				dx = 1;
+				dy = -1;
+			}
 
-				if (key.Scancode == (int)KeyList.Kp1)
-				{
-					dx = -1;
-					dy = 1;
-				}
-				else if (key.Scancode == (int)KeyList.Kp2)
-				{
-					dy = 1;
-				}
-				else if (key.Scancode == (int)KeyList.Kp3)
-				{
-					dx = 1;
-					dy = 1;
-				}
-				else if (key.Scancode == (int)KeyList.Kp4)
-				{
-					dx = -1;
-				}
-				else if (key.Scancode == (int)KeyList.Kp5)
-				{
-				}
-				else if (key.Scancode == (int)KeyList.Kp6)
-				{
-					dx = 1;
-				}
-				else if (key.Scancode == (int)KeyList.Kp7)
-				{
-					dx = -1;
-					dy = -1;
-				}
-				else if (key.Scancode == (int)KeyList.Kp8)
-				{
-					dy = -1;
-				}
-				else if (key.Scancode == (int)KeyList.Kp9)
-				{
-					dx = 1;
-					dy = -1;
-				}
+			dx *= StaticGameData.TileWidth;
+			dy *= StaticGameData.TileWidth;
+			Translate(new Vector2(dx, dy));
 
-				dx *= StaticGameData.TileWidth;
-				dy *= StaticGameData.TileWidth;
-				Translate(new Vector2(dx, dy));
-
-				if (dx != 0 || dy != 0)
-				{
-					EmitSignal(nameof(PositionChanged));
-				}
+			if (dx != 0 || dy != 0)
+			{
+				EmitSignal(nameof(PositionChanged));
 			}
 		}
 	}

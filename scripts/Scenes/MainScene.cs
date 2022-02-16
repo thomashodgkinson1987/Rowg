@@ -43,9 +43,8 @@ public class MainScene : Node2D
 
 	public override void _Ready ()
 	{
-		node_camera.Position = node_playerTile.Position - new Vector2(160, 160);
 		node_map.AllMapChunks.ForEach(_ => node_map.LoadMapChunk(_.X, _.Y));
-
+		node_camera.Position = node_playerTile.Position - new Vector2(160, 160);
 		OnPlayerTilePositionChanged();
 		OnMapBoundsChanged();
 	}
@@ -54,39 +53,11 @@ public class MainScene : Node2D
 	{
 		if (@event is InputEventKey key)
 		{
-			if (key.Pressed && !key.Echo && !key.Shift && !key.Control)
+			if (key.Pressed && /*!key.Echo &&*/ !key.Shift && !key.Control)
 			{
 				if (key.Scancode == (int)KeyList.Escape)
 				{
 					GetTree().Quit();
-				}
-				else if (key.Scancode == (int)KeyList.Key1)
-				{
-					if (!node_map.IsMapChunkLoaded(0, 0))
-						node_map.LoadMapChunk(0, 0);
-					else
-						node_map.UnloadMapChunk(0, 0);
-				}
-				else if (key.Scancode == (int)KeyList.Key2)
-				{
-					if (!node_map.IsMapChunkLoaded(1, 0))
-						node_map.LoadMapChunk(1, 0);
-					else
-						node_map.UnloadMapChunk(1, 0);
-				}
-				else if (key.Scancode == (int)KeyList.Key3)
-				{
-					if (!node_map.IsMapChunkLoaded(0, 1))
-						node_map.LoadMapChunk(0, 1);
-					else
-						node_map.UnloadMapChunk(0, 1);
-				}
-				else if (key.Scancode == (int)KeyList.Key4)
-				{
-					if (!node_map.IsMapChunkLoaded(1, 1))
-						node_map.LoadMapChunk(1, 1);
-					else
-						node_map.UnloadMapChunk(1, 1);
 				}
 				else if (key.Scancode == (int)KeyList.O)
 				{
@@ -95,6 +66,21 @@ public class MainScene : Node2D
 				else if (key.Scancode == (int)KeyList.C)
 				{
 					node_map.AllDoorTiles.ForEach(_ => _.Close());
+				}
+				else if (key.Scancode == (int)KeyList.T)
+				{
+					node_map.AllDoorTiles.ForEach(_ => _.Toggle());
+				}
+				else if (key.Scancode == (int)KeyList.R)
+				{
+					foreach (DoorTile doorTile in node_map.AllDoorTiles)
+					{
+						int c = m_rng.Next(2);
+						if (c == 0)
+							doorTile.Open();
+						else if (c == 1)
+							doorTile.Close();
+					}
 				}
 				else
 				{

@@ -284,15 +284,15 @@ public class Map : Node2D
 		if (projectedX < 0 || projectedX > StaticGameData.MapChunkWidthInTiles - 1 ||
 			projectedY < 0 || projectedY > StaticGameData.MapChunkHeightInTiles - 1)
 		{
-			int projectedMapChunkX = (int)((tile.GlobalPosition.x + (dx * StaticGameData.TileWidth)) - (tile.Position.x + (dx * StaticGameData.TileWidth))) / StaticGameData.MapChunkWidthInPixels;
-			int projectedMapChunkY = (int)((tile.GlobalPosition.y + (dy * StaticGameData.TileHeight)) - (tile.Position.y + (dy * StaticGameData.TileHeight))) / StaticGameData.MapChunkHeightInPixels;
+			int projectedMapChunkX = Mathf.FloorToInt((tile.GlobalPosition.x + (dx * StaticGameData.TileWidth)) / StaticGameData.MapChunkWidthInPixels);
+			int projectedMapChunkY = Mathf.FloorToInt((tile.GlobalPosition.y + (dy * StaticGameData.TileHeight)) / StaticGameData.MapChunkHeightInPixels);
 
 			if (IsMapChunk(projectedMapChunkX, projectedMapChunkY))
 			{
 				MapChunk projectedMapChunk = GetMapChunk(projectedMapChunkX, projectedMapChunkY);
 
-				int newX = Mathf.Wrap(projectedX, 0, StaticGameData.MapChunkWidthInTiles - 1);
-				int newY = Mathf.Wrap(projectedY, 0, StaticGameData.MapChunkHeightInTiles - 1);
+				int newX = Mathf.Wrap(projectedX, 0, StaticGameData.MapChunkWidthInTiles);
+				int newY = Mathf.Wrap(projectedY, 0, StaticGameData.MapChunkHeightInTiles);
 
 				if (projectedMapChunk.IsFloorTile(newX, newY) &&
 					(!projectedMapChunk.IsDoorTile(newX, newY) || projectedMapChunk.GetDoorTile(newX, newY).IsOpen) &&
@@ -300,12 +300,12 @@ public class Map : Node2D
 					!projectedMapChunk.IsActorTile(newX, newY))
 				{
 					originalMapChunk.RemoveActorTile(originalX, originalY);
-					projectedMapChunk.AddActorTile(projectedX, projectedY, tile);
-				}
+					projectedMapChunk.AddActorTile(newX, newY, tile);
 
-				if (!IsMapChunkLoaded(projectedMapChunkX, projectedMapChunkY))
-				{
-					LoadedActorTiles.Remove(tile);
+					if (!IsMapChunkLoaded(projectedMapChunkX, projectedMapChunkY))
+					{
+						LoadedActorTiles.Remove(tile);
+					}
 				}
 			}
 		}

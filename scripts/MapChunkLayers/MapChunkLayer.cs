@@ -47,12 +47,19 @@ public abstract class MapChunkLayer<T> : Node2D where T : Tile
 	{
 		AllTiles.Add(tile);
 		TileMap[y, x] = tile;
+		if (tile.GetParent() == null)
+		{
+			AddChild(tile);
+		}
+		tile.Position = new Vector2(x * StaticGameData.TileWidth, y * StaticGameData.TileHeight);
 	}
 
 	public void RemoveTile (int x, int y)
 	{
-		AllTiles.Remove(TileMap[y, x]);
+		T tile = GetTile(x, y);
+		AllTiles.Remove(tile);
 		TileMap[y, x] = null;
+		RemoveChild(tile);
 	}
 
 	public void MoveTile (int fromX, int fromY, int toX, int toY)

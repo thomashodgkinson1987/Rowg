@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://packed_scenes/map_chunks/MapChunk.tscn" type="PackedScene" id=1]
-[ext_resource path="res://packed_scenes/tiles/EnemyTile.tscn" type="PackedScene" id=2]
-[ext_resource path="res://packed_scenes/tiles/WallTile.tscn" type="PackedScene" id=7]
-[ext_resource path="res://packed_scenes/tiles/DoorTile.tscn" type="PackedScene" id=9]
-[ext_resource path="res://packed_scenes/tiles/FloorTile.tscn" type="PackedScene" id=11]
+[ext_resource path="res://packed_scenes/tiles/actor_tiles/EnemyTile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://packed_scenes/tiles/wall_tiles/WallTile.tscn" type="PackedScene" id=7]
+[ext_resource path="res://packed_scenes/tiles/door_tiles/DoorTile.tscn" type="PackedScene" id=9]
+[ext_resource path="res://packed_scenes/tiles/floor_tiles/FloorTile.tscn" type="PackedScene" id=11]
 
 [node name="MapChunk_0001" instance=ExtResource( 1 )]
 

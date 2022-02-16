@@ -37,4 +37,16 @@ public class DoorTile : Tile
 		node_sprite.Texture = m_closedTexture;
 	}
 
+	public void Toggle ()
+	{
+		if (IsOpen)
+		{
+			Close();
+		}
+		else
+		{
+			Open();
+		}
+	}
+
 }
