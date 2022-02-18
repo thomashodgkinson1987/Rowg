@@ -1,0 +1,2998 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://scripts/Tiles/WallTile.cs" type="Script" id=1]
+[ext_resource path="res://scripts/Maps/Map.cs" type="Script" id=2]
+[ext_resource path="res://scripts/MapChunkLayers/FloorTileMapChunkLayer.cs" type="Script" id=3]
+[ext_resource path="res://scripts/MapChunkLayers/WallTileMapChunkLayer.cs" type="Script" id=4]
+[ext_resource path="res://scripts/Tiles/ItemTile.cs" type="Script" id=5]
+[ext_resource path="res://scripts/MapChunkLayers/ItemTileMapChunkLayer.cs" type="Script" id=6]
+[ext_resource path="res://scripts/MapChunks/MapChunk.cs" type="Script" id=7]
+[ext_resource path="res://scripts/Tiles/FloorTile.cs" type="Script" id=8]
+[ext_resource path="res://sprites/rowg_tiles.sprites/0048.tres" type="Texture" id=9]
+[ext_resource path="res://sprites/rowg_tiles.sprites/0047.tres" type="Texture" id=10]
+[ext_resource path="res://sprites/rowg_tiles.sprites/0002.tres" type="Texture" id=11]
+[ext_resource path="res://packed_scenes/tiles/floor_tiles/BedTile.tscn" type="PackedScene" id=12]
+[ext_resource path="res://packed_scenes/tiles/door_tiles/DoorTile.tscn" type="PackedScene" id=13]
+[ext_resource path="res://packed_scenes/tiles/floor_tiles/GrassTile.tscn" type="PackedScene" id=14]
+[ext_resource path="res://packed_scenes/tiles/floor_tiles/FloorTile.tscn" type="PackedScene" id=15]
+[ext_resource path="res://packed_scenes/tiles/floor_tiles/StairsUpTile.tscn" type="PackedScene" id=16]
+[ext_resource path="res://packed_scenes/tiles/wall_tiles/BarrelTile.tscn" type="PackedScene" id=17]
+[ext_resource path="res://packed_scenes/tiles/floor_tiles/DirtTile.tscn" type="PackedScene" id=18]
+[ext_resource path="res://packed_scenes/tiles/floor_tiles/StairsDownTile.tscn" type="PackedScene" id=19]
+[ext_resource path="res://packed_scenes/tiles/item_tiles/BluePotionTile.tscn" type="PackedScene" id=20]
+[ext_resource path="res://packed_scenes/tiles/floor_tiles/FloorHatchTile.tscn" type="PackedScene" id=21]
+[ext_resource path="res://packed_scenes/tiles/item_tiles/GreenPotionTile.tscn" type="PackedScene" id=22]
+[ext_resource path="res://packed_scenes/tiles/item_tiles/RedPotionTile.tscn" type="PackedScene" id=23]
+[ext_resource path="res://packed_scenes/tiles/wall_tiles/WallTile.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scripts/Tiles/DoorTile.cs" type="Script" id=25]
+[ext_resource path="res://scripts/MapChunkLayers/DoorTileMapChunkLayer.cs" type="Script" id=26]
+[ext_resource path="res://scripts/Tiles/EnemyTile.cs" type="Script" id=27]
+[ext_resource path="res://scripts/MapChunkLayers/ActorTileMapChunkLayer.cs" type="Script" id=28]
+[ext_resource path="res://sprites/pixels/white_pixel.png" type="Texture" id=29]
+
+[node name="Map" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="MapChunk_All" type="Node2D" parent="."]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="FloorTileMapChunkLayer" type="Node2D" parent="MapChunk_All"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="FloorTile" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile2" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile3" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile4" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile5" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile6" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile7" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile8" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile9" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile10" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile11" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile12" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile13" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile14" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile15" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile16" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 0 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile17" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile18" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile19" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile20" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile21" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile22" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile23" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile24" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile25" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile26" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile27" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile28" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile32" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile33" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile35" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile36" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile37" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile38" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile39" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile40" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile41" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile42" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile43" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile44" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile48" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile49" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile50" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile51" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile52" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile53" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile54" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile55" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile56" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile57" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile58" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile59" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile60" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile64" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile65" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile66" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile67" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile68" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile69" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile70" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile71" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile72" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile73" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile74" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile75" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile76" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile77" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile78" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile79" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile80" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 80 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile81" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile82" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile83" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile84" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile85" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile86" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile87" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile88" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile89" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile90" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile91" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile92" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile93" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile94" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile95" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile96" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 100 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile97" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile98" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile99" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile100" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile101" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile102" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile103" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile104" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile105" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile106" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile107" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile108" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile109" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile110" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile111" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile112" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 120 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile113" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile114" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile115" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile116" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile117" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile118" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile119" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile120" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile121" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile122" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile123" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile124" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile125" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile126" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile127" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile128" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 140 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile129" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile130" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile131" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile132" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile133" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile134" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile135" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile136" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile137" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile138" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile139" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile140" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile141" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile142" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile143" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile144" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 160 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile145" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile146" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile147" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile148" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile149" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile150" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile151" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile152" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile153" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile154" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile155" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile156" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile157" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile158" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile159" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile160" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 180 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile161" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile163" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile165" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile167" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile168" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile169" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile170" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile171" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile172" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile173" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile174" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile175" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile176" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile177" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile178" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile179" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile180" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile181" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile182" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile183" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile184" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile185" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile186" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile187" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile188" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile189" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile190" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile191" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile192" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 220 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile193" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile194" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile195" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile196" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile197" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile198" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile199" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile200" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile201" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile202" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile203" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile204" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile205" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile206" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile208" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile209" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile210" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile211" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile212" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile213" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile214" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile215" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile216" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile217" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile218" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile219" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile220" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile221" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile222" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile223" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile224" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 260 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile225" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile227" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile229" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile231" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile232" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile233" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile234" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile235" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile236" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile237" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile238" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile240" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile241" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 0, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile242" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 20, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile243" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 40, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile244" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 60, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile245" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 80, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile246" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 100, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile247" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 120, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile248" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 140, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile249" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 160, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile250" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 180, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile251" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 200, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile252" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 220, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile253" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 240, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile254" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 260, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile255" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 280, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorTile256" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 15 )]
+position = Vector2( 300, 300 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="GrassTile" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 14 )]
+position = Vector2( 240, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="GrassTile2" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 14 )]
+position = Vector2( 240, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="GrassTile3" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 14 )]
+position = Vector2( 240, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="GrassTile4" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 14 )]
+position = Vector2( 280, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="GrassTile5" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 14 )]
+position = Vector2( 260, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 18 )]
+position = Vector2( 280, 20 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile2" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 18 )]
+position = Vector2( 260, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile3" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 18 )]
+position = Vector2( 280, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DirtTile4" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 18 )]
+position = Vector2( 260, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorHatchTile" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 21 )]
+position = Vector2( 20, 40 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StairsDownTile" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 19 )]
+position = Vector2( 280, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StairsUpTile" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 16 )]
+position = Vector2( 280, 240 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StairsUpTile2" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 16 )]
+position = Vector2( 20, 60 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BedTile" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 12 )]
+position = Vector2( 20, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BedTile2" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 12 )]
+position = Vector2( 60, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BedTile3" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 12 )]
+position = Vector2( 20, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BedTile4" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 12 )]
+position = Vector2( 60, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BedTile5" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 12 )]
+position = Vector2( 100, 280 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FloorHatchTile2" type="Node2D" parent="MapChunk_All/FloorTileMapChunkLayer" instance=ExtResource( 21 )]
+position = Vector2( 100, 200 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ItemTileMapChunkLayer" type="Node2D" parent="MapChunk_All"]
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BluePotionTile" type="Node2D" parent="MapChunk_All/ItemTileMapChunkLayer" instance=ExtResource( 20 )]
+position = Vector2( 60, 60 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="GreenPotionTile" type="Node2D" parent="MapChunk_All/ItemTileMapChunkLayer" instance=ExtResource( 22 )]
+position = Vector2( 280, 20 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RedPotionTile" type="Node2D" parent="MapChunk_All/ItemTileMapChunkLayer" instance=ExtResource( 23 )]
+position = Vector2( 260, 60 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DoorTileMapChunkLayer" type="Node2D" parent="MapChunk_All"]
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DoorTile" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 40, 80 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+IsOpen = false
+
+[node name="DoorTile2" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 140, 120 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+
+[node name="DoorTile3" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 140, 180 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+IsOpen = false
+
+[node name="DoorTile5" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 120, 240 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+
+[node name="DoorTile6" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 100, 220 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+IsOpen = false
+
+[node name="DoorTile7" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 60, 220 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+
+[node name="DoorTile8" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 20, 220 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+IsOpen = false
+
+[node name="DoorTile9" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 20, 260 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+
+[node name="DoorTile10" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 60, 260 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+IsOpen = false
+
+[node name="DoorTile11" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 100, 260 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+IsOpen = false
+
+[node name="DoorTile4" type="Node2D" parent="MapChunk_All/DoorTileMapChunkLayer" instance=ExtResource( 13 )]
+position = Vector2( 220, 40 )
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+m_openTexture = ExtResource( 10 )
+m_closedTexture = ExtResource( 9 )
+
+[node name="WallTileMapChunkLayer" type="Node2D" parent="MapChunk_All"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WallTile" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile2" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile3" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 40 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile4" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 60 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile5" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile6" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 100 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile7" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 120 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile8" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 140 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile9" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 160 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile10" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile11" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile12" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile13" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 240 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile14" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 260 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile15" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 280 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile16" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile17" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 20, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile47" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 20, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile48" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 40, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile49" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 60, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile50" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile51" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 100, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile52" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile53" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 140, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile54" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 160, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile55" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 180, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile56" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 200, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile57" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 220, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile58" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 240, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile59" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 260, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile60" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 280, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile18" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 40, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile19" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 60, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile20" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile21" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 100, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile22" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile23" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 140, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile24" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 160, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile25" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 180, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile26" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 200, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile27" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 220, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile28" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 240, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile29" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 260, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile30" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 280, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile31" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 0, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile32" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile33" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 40 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile34" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 60 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile35" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile36" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 100 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile37" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 120 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile38" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 140 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile39" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 160 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile40" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile41" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile42" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile43" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 240 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile44" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 260 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile45" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 280 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile46" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 300, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile61" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 20, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile62" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 60, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile63" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 60 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile64" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 40 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile65" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile66" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile67" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 100 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile68" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 120 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile69" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 100, 120 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile70" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 120 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile71" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 160, 120 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile72" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 180, 120 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile73" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 200, 120 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile74" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 200, 100 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile75" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 200, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile76" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 220, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile77" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 240, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile78" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 260, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile79" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 280, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile80" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 220, 60 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile81" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 220, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile82" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 200, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile83" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 200, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile84" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 200, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile85" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 220, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile86" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 240, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile87" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 260, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile88" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 280, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile89" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 20, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile90" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 40, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile91" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 60, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile92" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile93" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 100, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile94" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile95" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 180, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile96" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 160, 180 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile97" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile98" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile99" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 260 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile100" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 280 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile101" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 40, 260 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile102" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 40, 280 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile103" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 40, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile104" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 40, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile105" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 200 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile106" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 220 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile107" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 260 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile108" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 80, 280 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile109" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 240, 140 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile110" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 260, 140 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile111" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 260, 160 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile112" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 240, 160 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile113" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 40 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile114" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 120, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile115" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 160, 80 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="WallTile116" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 24 )]
+position = Vector2( 160, 40 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BarrelTile" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 17 )]
+position = Vector2( 20, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BarrelTile2" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 17 )]
+position = Vector2( 40, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BarrelTile3" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 17 )]
+position = Vector2( 60, 40 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BarrelTile4" type="Node2D" parent="MapChunk_All/WallTileMapChunkLayer" instance=ExtResource( 17 )]
+position = Vector2( 60, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ActorTileMapChunkLayer" type="Node2D" parent="MapChunk_All"]
+script = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyTile" type="Node2D" parent="MapChunk_All/ActorTileMapChunkLayer"]
+position = Vector2( 260, 40 )
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BackgroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile"]
+self_modulate = Color( 1, 0, 1, 1 )
+texture = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ForegroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyTile2" type="Node2D" parent="MapChunk_All/ActorTileMapChunkLayer"]
+position = Vector2( 40, 60 )
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BackgroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile2"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile2"]
+self_modulate = Color( 0, 0, 1, 1 )
+texture = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ForegroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile2"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyTile3" type="Node2D" parent="MapChunk_All/ActorTileMapChunkLayer"]
+position = Vector2( 160, 260 )
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BackgroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile3"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile3"]
+self_modulate = Color( 1, 0, 0, 1 )
+texture = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ForegroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile3"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyTile4" type="Node2D" parent="MapChunk_All/ActorTileMapChunkLayer"]
+position = Vector2( 180, 220 )
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BackgroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile4"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile4"]
+self_modulate = Color( 0, 1, 1, 1 )
+texture = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ForegroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile4"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyTile5" type="Node2D" parent="MapChunk_All/ActorTileMapChunkLayer"]
+position = Vector2( 220, 260 )
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BackgroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile5"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile5"]
+self_modulate = Color( 0, 1, 0, 1 )
+texture = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ForegroundSprite" type="Sprite" parent="MapChunk_All/ActorTileMapChunkLayer/EnemyTile5"]
+self_modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 29 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
