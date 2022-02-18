@@ -26,133 +26,85 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="LeftCap" type="Sprite" parent="AutoTilePieces" index="0"]
-position = Vector2( 60, 40 )
-texture = ExtResource( 4 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="RightCap" type="Sprite" parent="AutoTilePieces" index="1"]
-position = Vector2( 100, 40 )
-texture = ExtResource( 5 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="TopCap" type="Sprite" parent="AutoTilePieces" index="2"]
-position = Vector2( 40, 60 )
-texture = ExtResource( 6 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="BottomCap" type="Sprite" parent="AutoTilePieces" index="3"]
-position = Vector2( 40, 100 )
-texture = ExtResource( 7 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="TopLeftCap" type="Sprite" parent="AutoTilePieces" index="4"]
-position = Vector2( 60, 60 )
-texture = ExtResource( 8 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="TopRightCap" type="Sprite" parent="AutoTilePieces" index="5"]
-position = Vector2( 100, 60 )
-texture = ExtResource( 9 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="BottomLeftCap" type="Sprite" parent="AutoTilePieces" index="6"]
-position = Vector2( 60, 100 )
-texture = ExtResource( 11 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="BottomRightCap" type="Sprite" parent="AutoTilePieces" index="7"]
-position = Vector2( 100, 100 )
-texture = ExtResource( 10 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Left" type="Sprite" parent="AutoTilePieces" index="8"]
-position = Vector2( 60, 80 )
-texture = ExtResource( 13 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Right" type="Sprite" parent="AutoTilePieces" index="9"]
-position = Vector2( 100, 80 )
-texture = ExtResource( 12 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Top" type="Sprite" parent="AutoTilePieces" index="10"]
-position = Vector2( 80, 60 )
-texture = ExtResource( 14 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Bottom" type="Sprite" parent="AutoTilePieces" index="11"]
-position = Vector2( 80, 100 )
-texture = ExtResource( 15 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Center" type="Sprite" parent="AutoTilePieces" index="12"]
-position = Vector2( 80, 80 )
-texture = ExtResource( 16 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="HorizontalCenter" type="Sprite" parent="AutoTilePieces" index="13"]
-position = Vector2( 80, 40 )
-texture = ExtResource( 15 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="VerticalCenter" type="Sprite" parent="AutoTilePieces" index="14"]
-position = Vector2( 40, 80 )
-texture = ExtResource( 12 )
-centered = false
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Single" type="Sprite" parent="AutoTilePieces" index="15"]
+[node name="Single" type="Sprite" parent="AutoTilePieces" index="0"]
 position = Vector2( 40, 40 )
 texture = ExtResource( 2 )
 centered = false
-__meta__ = {
-"_edit_lock_": true
-}
+
+[node name="Center" type="Sprite" parent="AutoTilePieces" index="1"]
+position = Vector2( 80, 80 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="LeftCap" type="Sprite" parent="AutoTilePieces" index="2"]
+position = Vector2( 60, 40 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="HorizontalCenter" type="Sprite" parent="AutoTilePieces" index="3"]
+position = Vector2( 80, 40 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="RightCap" type="Sprite" parent="AutoTilePieces" index="4"]
+position = Vector2( 100, 40 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="TopCap" type="Sprite" parent="AutoTilePieces" index="5"]
+position = Vector2( 40, 60 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="VerticalCenter" type="Sprite" parent="AutoTilePieces" index="6"]
+position = Vector2( 40, 80 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="BottomCap" type="Sprite" parent="AutoTilePieces" index="7"]
+position = Vector2( 40, 100 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="TopLeftCap" type="Sprite" parent="AutoTilePieces" index="8"]
+position = Vector2( 60, 60 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="TopRightCap" type="Sprite" parent="AutoTilePieces" index="9"]
+position = Vector2( 100, 60 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="BottomLeftCap" type="Sprite" parent="AutoTilePieces" index="10"]
+position = Vector2( 60, 100 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="BottomRightCap" type="Sprite" parent="AutoTilePieces" index="11"]
+position = Vector2( 100, 100 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="Left" type="Sprite" parent="AutoTilePieces" index="12"]
+position = Vector2( 60, 80 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="Right" type="Sprite" parent="AutoTilePieces" index="13"]
+position = Vector2( 100, 80 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="Top" type="Sprite" parent="AutoTilePieces" index="14"]
+position = Vector2( 80, 60 )
+texture = ExtResource( 14 )
+centered = false
+
+[node name="Bottom" type="Sprite" parent="AutoTilePieces" index="15"]
+position = Vector2( 80, 100 )
+texture = ExtResource( 15 )
+centered = false
 
 [node name="Sprite" parent="." index="2"]
 texture = ExtResource( 2 )

@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://packed_scenes/tiles/actor_tiles/ActorTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Tiles/PlayerTile.cs" type="Script" id=2]
+[ext_resource path="res://sprites/rowg_tiles.sprites/001.tres" type="Texture" id=3]
 
 [node name="PlayerTile" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="BackgroundSprite" parent="." index="0"]
 self_modulate = Color( 0, 0, 1, 0.498039 )
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 3 )

@@ -47,6 +47,11 @@ public class MainScene : Node2D
 		node_camera.Position = node_playerTile.Position - new Vector2(160, 160);
 		OnPlayerTilePositionChanged();
 		OnMapBoundsChanged();
+
+		foreach (WallTile wallTile in node_map.AllWallTiles)
+		{
+			wallTile.UpdateAutoTileSprite();
+		}
 	}
 
 	public override void _Input (InputEvent @event)

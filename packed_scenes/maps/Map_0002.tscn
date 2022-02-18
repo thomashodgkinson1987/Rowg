@@ -11,7 +11,7 @@
 [ext_resource path="res://packed_scenes/map_chunks/MapChunk_BottomLeft.tscn" type="PackedScene" id=9]
 [ext_resource path="res://packed_scenes/map_chunks/MapChunk_Right.tscn" type="PackedScene" id=10]
 
-[node name="Map_0002" instance=ExtResource( 1 )]
+[node name="Map" instance=ExtResource( 1 )]
 
 [node name="MapChunk_TopLeft" parent="." index="0" instance=ExtResource( 3 )]
 position = Vector2( -320, -320 )
