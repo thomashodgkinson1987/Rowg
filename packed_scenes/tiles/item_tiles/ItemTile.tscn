@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://sprites/rowg_tiles.sprites/094.tres" type="Texture" id=1]
+[ext_resource path="res://sprites/tiles.sprites/mixed/092.tres" type="Texture" id=1]
 [ext_resource path="res://packed_scenes/tiles/Tile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/Tiles/ItemTile.cs" type="Script" id=3]
 

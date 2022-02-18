@@ -163,11 +163,7 @@ public class WallTile : Tile
 		//bool isDownLeft = m_collisionDictionary[new Vector2(-1, 1)] != null;
 		//bool isDownRight = m_collisionDictionary[new Vector2(1, 1)] != null;
 
-		if (isLeft && isRight && isUp && isDown)
-		{
-			node_sprite.Texture = m_textureDictionary["Center"];
-		}
-		else if (!isLeft && !isRight && !isUp && !isDown)
+		if (!isLeft && !isRight && !isUp && !isDown)
 		{
 			node_sprite.Texture = m_textureDictionary["Single"];
 		}
@@ -175,51 +171,67 @@ public class WallTile : Tile
 		{
 			if (!isLeft && isRight && !isUp && !isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["LeftCap"];
+				node_sprite.Texture = m_textureDictionary["Horizontal_Left"];
 			}
 			else if (isLeft && isRight && !isUp && !isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["HorizontalCenter"];
+				node_sprite.Texture = m_textureDictionary["Horizontal_Center"];
 			}
 			else if (isLeft && !isRight && !isUp && !isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["RightCap"];
+				node_sprite.Texture = m_textureDictionary["Horizontal_Right"];
 			}
+
 			else if (!isLeft && !isRight && !isUp && isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["TopCap"];
+				node_sprite.Texture = m_textureDictionary["Vertical_Top"];
 			}
 			else if (!isLeft && !isRight && isUp && isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["VerticalCenter"];
+				node_sprite.Texture = m_textureDictionary["Vertical_Center"];
 			}
 			else if (!isLeft && !isRight && isUp && !isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["BottomCap"];
+				node_sprite.Texture = m_textureDictionary["Vertical_Bottom"];
 			}
+
 			else if (!isLeft && isRight && !isUp && isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["TopLeftCap"];
+				node_sprite.Texture = m_textureDictionary["Top_Left"];
 			}
 			else if (isLeft && isRight && !isUp && isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["Top"];
+				node_sprite.Texture = m_textureDictionary["Top_Center"];
 			}
 			else if (isLeft && !isRight && !isUp && isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["TopRightCap"];
+				node_sprite.Texture = m_textureDictionary["Top_Right"];
 			}
+
+			else if (!isLeft && isRight && isUp && isDown)
+			{
+				node_sprite.Texture = m_textureDictionary["Middle_Left"];
+			}
+			else if (isLeft && isRight && isUp && isDown)
+			{
+				node_sprite.Texture = m_textureDictionary["Middle_Center"];
+			}
+			else if (isLeft && !isRight && isUp && isDown)
+			{
+				node_sprite.Texture = m_textureDictionary["Middle_Right"];
+			}
+
 			else if (!isLeft && isRight && isUp && !isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["BottomLeftCap"];
+				node_sprite.Texture = m_textureDictionary["Bottom_Left"];
 			}
 			else if (isLeft && isRight && isUp && !isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["Bottom"];
+				node_sprite.Texture = m_textureDictionary["Bottom_Center"];
 			}
 			else if (isLeft && !isRight && isUp && !isDown)
 			{
-				node_sprite.Texture = m_textureDictionary["BottomRightCap"];
+				node_sprite.Texture = m_textureDictionary["Bottom_Right"];
 			}
 		}
 	}

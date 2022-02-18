@@ -58,7 +58,7 @@ public class MainScene : Node2D
 	{
 		if (@event is InputEventKey key)
 		{
-			if (key.Pressed && /*!key.Echo &&*/ !key.Shift && !key.Control)
+			if (key.Pressed && !key.Shift && !key.Control)
 			{
 				if (key.Scancode == (int)KeyList.Escape)
 				{
