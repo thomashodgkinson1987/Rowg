@@ -105,12 +105,15 @@ public class Map : Node2D
 
 	public override void _Ready ()
 	{
-		foreach (MapChunk mapChunk in GetChildren())
+		foreach (object obj in GetChildren())
 		{
-			mapChunk.X = (int)mapChunk.Position.x / StaticGameData.MapChunkWidthInPixels;
-			mapChunk.Y = (int)mapChunk.Position.y / StaticGameData.MapChunkWidthInPixels;
-			AllMapChunks.Add(mapChunk);
-			RemoveChild(mapChunk);
+			if (obj is MapChunk mapChunk)
+			{
+				mapChunk.X = (int)mapChunk.Position.x / StaticGameData.MapChunkWidthInPixels;
+				mapChunk.Y = (int)mapChunk.Position.y / StaticGameData.MapChunkWidthInPixels;
+				AllMapChunks.Add(mapChunk);
+				RemoveChild(mapChunk);
+			}
 		}
 
 		RecalculateBounds();
@@ -135,15 +138,6 @@ public class Map : Node2D
 		LoadedActorTiles.ForEach(_ => _.Tick(delta, this));
 	}
 
-	public MapChunk CreateMapChunk (int x, int y)
-	{
-		PackedScene mapChunkPackedScene = GD.Load<PackedScene>("res://packed_scenes/map_chunks/MapChunk.tscn");
-		MapChunk mapChunk = mapChunkPackedScene.Instance<MapChunk>();
-		AddChild(mapChunk);
-		AddMapChunk(x, y, mapChunk);
-
-		return mapChunk;
-	}
 	public void AddMapChunk (int x, int y, MapChunk mapChunk)
 	{
 		mapChunk.X = x;

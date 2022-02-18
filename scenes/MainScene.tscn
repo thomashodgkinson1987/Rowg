@@ -10,6 +10,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Center" type="Position2D" parent="."]
+position = Vector2( 160, 160 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="Camera" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
