@@ -1,3 +1,1 @@
-﻿public class ActorTileMapChunkLayer : MapChunkLayer<ActorTile>
-{
-}
+﻿public class ActorTileMapChunkLayer : MapChunkLayer<ActorTile> { }

@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Scenes/MainScene.cs" type="Script" id=1]
-[ext_resource path="res://packed_scenes/maps/Map_0001.tscn" type="PackedScene" id=2]
+[ext_resource path="res://packed_scenes/maps/Map_0002.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/UI/MessageLogUI.cs" type="Script" id=3]
+[ext_resource path="res://packed_scenes/ui/MessageLogEntry.tscn" type="PackedScene" id=4]
 [ext_resource path="res://packed_scenes/tiles/actor_tiles/PlayerTile.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
@@ -11,16 +13,74 @@ __meta__ = {
 }
 
 [node name="Center" type="Position2D" parent="."]
-position = Vector2( 160, 160 )
+position = Vector2( 200, 200 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_right = 320.0
+margin_bottom = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 320, 320 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera" type="Camera2D" parent="ViewportContainer/Viewport"]
 anchor_mode = 0
 current = true
+limit_left = 0
+limit_top = 0
+limit_right = 320
+limit_bottom = 320
 
-[node name="Map" parent="." instance=ExtResource( 2 )]
+[node name="Map" parent="ViewportContainer/Viewport" instance=ExtResource( 2 )]
 
-[node name="PlayerTile" parent="." instance=ExtResource( 5 )]
+[node name="PlayerTile" parent="ViewportContainer/Viewport" instance=ExtResource( 5 )]
 position = Vector2( 160, 160 )
+
+[node name="RightUI" type="Control" parent="."]
+margin_left = 320.0
+margin_right = 400.0
+margin_bottom = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="RightUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BottomUI" type="Control" parent="."]
+margin_top = 320.0
+margin_right = 320.0
+margin_bottom = 400.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+m_messageLogEntryPackedScene = ExtResource( 4 )
+
+[node name="Panel" type="Panel" parent="BottomUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BottomUI/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BottomUI/Panel/ScrollContainer"]
+margin_right = 320.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 320, 80 )
+custom_constants/separation = 0
+
+[node name="RichTextLabel" parent="BottomUI/Panel/ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]

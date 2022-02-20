@@ -1,5 +1,1 @@
-using Godot;
-
-public class FloorTile : Tile
-{
-}
+public class FloorTile : Tile { }

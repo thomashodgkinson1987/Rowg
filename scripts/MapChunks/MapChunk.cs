@@ -7,6 +7,7 @@ public class MapChunk : Node2D
 	#region Nodes
 
 	private FloorTileMapChunkLayer node_layers_floorTiles;
+	private FurnitureTileMapChunkLayer node_layers_furnitureTiles;
 	private ItemTileMapChunkLayer node_layers_itemTiles;
 	private DoorTileMapChunkLayer node_layers_doorTiles;
 	private WallTileMapChunkLayer node_layers_wallTiles;
@@ -19,6 +20,7 @@ public class MapChunk : Node2D
 	#region Properties
 
 	public List<FloorTile> AllFloorTiles => node_layers_floorTiles.AllTiles;
+	public List<FurnitureTile> AllFurnitureTiles => node_layers_furnitureTiles.AllTiles;
 	public List<ItemTile> AllItemTiles => node_layers_itemTiles.AllTiles;
 	public List<DoorTile> AllDoorTiles => node_layers_doorTiles.AllTiles;
 	public List<WallTile> AllWallTiles => node_layers_wallTiles.AllTiles;
@@ -54,6 +56,7 @@ public class MapChunk : Node2D
 	public override void _EnterTree ()
 	{
 		node_layers_floorTiles = GetNode<FloorTileMapChunkLayer>("FloorTileMapChunkLayer");
+		node_layers_furnitureTiles = GetNode<FurnitureTileMapChunkLayer>("FurnitureTileMapChunkLayer");
 		node_layers_itemTiles = GetNode<ItemTileMapChunkLayer>("ItemTileMapChunkLayer");
 		node_layers_doorTiles = GetNode<DoorTileMapChunkLayer>("DoorTileMapChunkLayer");
 		node_layers_wallTiles = GetNode<WallTileMapChunkLayer>("WallTileMapChunkLayer");
@@ -69,6 +72,10 @@ public class MapChunk : Node2D
 	public void AddFloorTile (int x, int y, FloorTile tile)
 	{
 		node_layers_floorTiles.AddTile(x, y, tile);
+	}
+	public void AddFurnitureTile (int x, int y, FurnitureTile tile)
+	{
+		node_layers_furnitureTiles.AddTile(x, y, tile);
 	}
 	public void AddItemTile (int x, int y, ItemTile tile)
 	{
@@ -91,6 +98,10 @@ public class MapChunk : Node2D
 	{
 		node_layers_floorTiles.RemoveTile(x, y);
 	}
+	public void RemoveFurnitureTile (int x, int y)
+	{
+		node_layers_furnitureTiles.RemoveTile(x, y);
+	}
 	public void RemoveItemTile (int x, int y)
 	{
 		node_layers_itemTiles.RemoveTile(x, y);
@@ -111,6 +122,10 @@ public class MapChunk : Node2D
 	public void MoveFloorTile (int fromX, int fromY, int toX, int toY)
 	{
 		node_layers_floorTiles.MoveTile(fromX, fromY, toX, toY);
+	}
+	public void MoveFurnitureTile (int fromX, int fromY, int toX, int toY)
+	{
+		node_layers_furnitureTiles.MoveTile(fromX, fromY, toX, toY);
 	}
 	public void MoveItemTile (int fromX, int fromY, int toX, int toY)
 	{
@@ -133,6 +148,10 @@ public class MapChunk : Node2D
 	{
 		return node_layers_floorTiles.GetTile(x, y);
 	}
+	public FurnitureTile GetFurnitureTile (int x, int y)
+	{
+		return node_layers_furnitureTiles.GetTile(x, y);
+	}
 	public ItemTile GetItemTile (int x, int y)
 	{
 		return node_layers_itemTiles.GetTile(x, y);
@@ -153,6 +172,10 @@ public class MapChunk : Node2D
 	public bool IsFloorTile (int x, int y)
 	{
 		return node_layers_floorTiles.IsTile(x, y);
+	}
+	public bool IsFurnitureTile (int x, int y)
+	{
+		return node_layers_furnitureTiles.IsTile(x, y);
 	}
 	public bool IsItemTile (int x, int y)
 	{

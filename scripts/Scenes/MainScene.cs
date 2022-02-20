@@ -9,6 +9,8 @@ public class MainScene : Node2D
 	private PlayerTile node_playerTile;
 	private Map node_map;
 
+	private MessageLogUI node_bottomUI;
+
 	#endregion // Nodes
 
 
@@ -36,9 +38,11 @@ public class MainScene : Node2D
 
 	public override void _EnterTree ()
 	{
-		node_camera = GetNode<Camera2D>("Camera");
-		node_playerTile = GetNode<PlayerTile>("PlayerTile");
-		node_map = GetNode<Map>("Map");
+		node_camera = GetNode<Camera2D>("ViewportContainer/Viewport/Camera");
+		node_playerTile = GetNode<PlayerTile>("ViewportContainer/Viewport/PlayerTile");
+		node_map = GetNode<Map>("ViewportContainer/Viewport/Map");
+
+		node_bottomUI = GetNode<MessageLogUI>("BottomUI");
 	}
 
 	public override void _Ready ()
@@ -64,28 +68,9 @@ public class MainScene : Node2D
 				{
 					GetTree().Quit();
 				}
-				else if (key.Scancode == (int)KeyList.O)
+				else if (key.Scancode == (int)KeyList.Space)
 				{
-					node_map.AllDoorTiles.ForEach(_ => _.Open());
-				}
-				else if (key.Scancode == (int)KeyList.C)
-				{
-					node_map.AllDoorTiles.ForEach(_ => _.Close());
-				}
-				else if (key.Scancode == (int)KeyList.T)
-				{
-					node_map.AllDoorTiles.ForEach(_ => _.Toggle());
-				}
-				else if (key.Scancode == (int)KeyList.R)
-				{
-					foreach (DoorTile doorTile in node_map.AllDoorTiles)
-					{
-						int c = m_rng.Next(2);
-						if (c == 0)
-							doorTile.Open();
-						else if (c == 1)
-							doorTile.Close();
-					}
+					node_bottomUI.AddEntry("Hello, World!");
 				}
 				else
 				{

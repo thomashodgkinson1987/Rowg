@@ -1,3 +1,1 @@
-﻿public class ItemTileMapChunkLayer : MapChunkLayer<ItemTile>
-{
-}
+﻿public class ItemTileMapChunkLayer : MapChunkLayer<ItemTile> { }

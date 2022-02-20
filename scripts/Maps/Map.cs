@@ -24,6 +24,15 @@ public class Map : Node2D
 			return tiles;
 		}
 	}
+	public List<FurnitureTile> AllFurnitureTiles
+	{
+		get
+		{
+			List<FurnitureTile> tiles = new List<FurnitureTile>();
+			AllMapChunks.ForEach(_ => tiles.AddRange(_.AllFurnitureTiles));
+			return tiles;
+		}
+	}
 	public List<ItemTile> AllItemTiles
 	{
 		get
@@ -72,6 +81,7 @@ public class Map : Node2D
 	public readonly List<MapChunk> LoadedMapChunks;
 
 	public readonly List<FloorTile> LoadedFloorTiles;
+	public readonly List<FurnitureTile> LoadedFurnitureTiles;
 	public readonly List<ItemTile> LoadedItemTiles;
 	public readonly List<DoorTile> LoadedDoorTiles;
 	public readonly List<WallTile> LoadedWallTiles;
@@ -90,6 +100,7 @@ public class Map : Node2D
 		AllMapChunks = new List<MapChunk>();
 		LoadedMapChunks = new List<MapChunk>();
 		LoadedFloorTiles = new List<FloorTile>();
+		LoadedFurnitureTiles = new List<FurnitureTile>();
 		LoadedItemTiles = new List<ItemTile>();
 		LoadedDoorTiles = new List<DoorTile>();
 		LoadedWallTiles = new List<WallTile>();
@@ -170,6 +181,7 @@ public class Map : Node2D
 
 			LoadedMapChunks.Add(mapChunk);
 			LoadedFloorTiles.AddRange(mapChunk.AllFloorTiles);
+			LoadedFurnitureTiles.AddRange(mapChunk.AllFurnitureTiles);
 			LoadedItemTiles.AddRange(mapChunk.AllItemTiles);
 			LoadedDoorTiles.AddRange(mapChunk.AllDoorTiles);
 			LoadedWallTiles.AddRange(mapChunk.AllWallTiles);
@@ -186,6 +198,7 @@ public class Map : Node2D
 
 			LoadedMapChunks.Remove(mapChunk);
 			LoadedFloorTiles.RemoveAll(_ => mapChunk.AllFloorTiles.Contains(_));
+			LoadedFurnitureTiles.RemoveAll(_ => mapChunk.AllFurnitureTiles.Contains(_));
 			LoadedItemTiles.RemoveAll(_ => mapChunk.AllItemTiles.Contains(_));
 			LoadedDoorTiles.RemoveAll(_ => mapChunk.AllDoorTiles.Contains(_));
 			LoadedWallTiles.RemoveAll(_ => mapChunk.AllWallTiles.Contains(_));
@@ -202,36 +215,28 @@ public class Map : Node2D
 	}
 
 	//public void AddFloorTile (int x, int y, FloorTile floor) { }
+	//public void AddFurnitureTile (int x, int y, FurnitureTile floor) { }
 	//public void AddItemTile (int x, int y, ItemTile item) { }
 	//public void AddDoorTile (int x, int y, DoorTile door) { }
 	//public void AddWallTile (int x, int y, WallTile wall) { }
 	//public void AddActorTile (int x, int y, ActorTile actor) { }
 
 	//public void RemoveFloorTile (int x, int y) { }
+	//public void RemoveFurnitureTile (int x, int y) { }
 	//public void RemoveItemTile (int x, int y) { }
 	//public void RemoveDoorTile (int x, int y) { }
 	//public void RemoveWallTile (int x, int y) { }
 	//public void RemoveActorTile (int x, int y) { }
 
-	//public void RemoveFloorTile (FloorTile floor) { }
-	//public void RemoveItemTile (ItemTile item) { }
-	//public void RemoveDoorTile (DoorTile door) { }
-	//public void RemoveWallTile (WallTile wall) { }
-	//public void RemoveActorTile (ActorTile actor) { }
-
 	//public FloorTile GetFloorTile (int x, int y) { }
+	//public FurnitureTile GetFurnitureTile (int x, int y) { }
 	//public ItemTile GetItemTile (int x, int y) { }
 	//public DoorTile GetDoorTile (int x, int y) { }
 	//public WallTile GetWallTile (int x, int y) { }
 	//public ActorTile GetActorTile (int x, int y) { }
 
-	//public void SetFloorTile (int x, int y, FloorTile floor) { }
-	//public void SetItemTile (int x, int y, ItemTile item) { }
-	//public void SetDoorTile (int x, int y, DoorTile door) { }
-	//public void SetWallTile (int x, int y, WallTile wall) { }
-	//public void SetActorTile (int x, int y, ActorTile actor) { }
-
 	//public bool IsFloorTile (int x, int y) { }
+	//public bool IsFurnitureTile (int x, int y) { }
 	//public bool IsItemTile (int x, int y) { }
 	//public bool IsDoorTile (int x, int y) { }
 	//public bool IsWallTile (int x, int y) { }
@@ -260,6 +265,7 @@ public class Map : Node2D
 	}
 
 	public void MoveFloorTile (int dx, int dy, FloorTile tile) { }
+	public void MoveFurnitureTile (int dx, int dt, FurnitureTile tile) { }
 	public void MoveItemTile (int dx, int dy, ItemTile tile) { }
 	public void MoveDoorTile (int dx, int dy, DoorTile tile) { }
 	public void MoveWallTile (int dx, int dy, WallTile tile) { }

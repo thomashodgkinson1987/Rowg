@@ -1,3 +1,1 @@
-﻿public class WallTileMapChunkLayer : MapChunkLayer<WallTile>
-{
-}
+﻿public class WallTileMapChunkLayer : MapChunkLayer<WallTile> { }
