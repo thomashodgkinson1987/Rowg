@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://packed_scenes/maps/chunks/layers/ActorLayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://packed_scenes/maps/chunks/layers/FloorLayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://packed_scenes/maps/chunks/layers/ItemLayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://packed_scenes/maps/chunks/layers/WallLayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://packed_scenes/maps/chunks/layers/DoorLayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://packed_scenes/maps/chunks/layers/FurnitureLayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/Maps/Chunks/Chunk.cs" type="Script" id=7]
+
+[node name="Chunk" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Center" type="Position2D" parent="."]
+position = Vector2( 200, 200 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="FloorLayer" parent="." instance=ExtResource( 2 )]
+
+[node name="FurnitureLayer" parent="." instance=ExtResource( 6 )]
+
+[node name="ItemLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="DoorLayer" parent="." instance=ExtResource( 5 )]
+
+[node name="WallLayer" parent="." instance=ExtResource( 4 )]
+
+[node name="ActorLayer" parent="." instance=ExtResource( 1 )]

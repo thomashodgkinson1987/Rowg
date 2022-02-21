@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://sprites/tiles.sprites/items/potions/green_potion.tres" type="Texture" id=1]
-[ext_resource path="res://packed_scenes/tiles/item_tiles/ItemTile.tscn" type="PackedScene" id=2]
-
-[node name="GreenPotionTile" instance=ExtResource( 2 )]
-
-[node name="Sprite" parent="." index="1"]
-texture = ExtResource( 1 )

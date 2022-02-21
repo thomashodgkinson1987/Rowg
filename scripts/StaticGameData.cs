@@ -1,13 +1,13 @@
 ﻿public static class StaticGameData
 {
 
-    public const int TileWidth = 20;
-    public const int TileHeight = 20;
+    public const int TileWidthInPixels = 20;
+    public const int TileHeightInPixels = 20;
 
-    public const int MapChunkWidthInTiles = 16;
-    public const int MapChunkHeightInTiles = 16;
+    public const int ChunkWidthInTiles = 16;
+    public const int ChunkHeightInTiles = 16;
 
-    public const int MapChunkWidthInPixels = MapChunkWidthInTiles * TileWidth;
-    public const int MapChunkHeightInPixels = MapChunkHeightInTiles * TileHeight;
+    public const int ChunkWidthInPixels = ChunkWidthInTiles * TileWidthInPixels;
+    public const int MapChunkHeightInPixels = ChunkHeightInTiles * TileHeightInPixels;
 
 }

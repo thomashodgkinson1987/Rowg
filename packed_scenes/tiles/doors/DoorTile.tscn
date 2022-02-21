@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/tiles.sprites/doors/wooden_door_open.tres" type="Texture" id=1]
+[ext_resource path="res://packed_scenes/tiles/Tile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Tiles/Views/DoorTileView.cs" type="Script" id=3]
+[ext_resource path="res://sprites/tiles.sprites/doors/wooden_door_closed.tres" type="Texture" id=4]
+
+[node name="DoorTile" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+m_openTexture = ExtResource( 1 )
+m_closedTexture = ExtResource( 4 )
+IsOpen = false
+
+[node name="Sprite" parent="." index="2"]
+texture = ExtResource( 4 )

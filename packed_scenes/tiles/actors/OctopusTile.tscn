@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://packed_scenes/tiles/actors/ActorTile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/tiles.sprites/actors/octopus.tres" type="Texture" id=2]
+[ext_resource path="res://scripts/Tiles/Views/EnemyTileView.cs" type="Script" id=3]
+
+[node name="OctopusTile" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="2"]
+texture = ExtResource( 2 )
