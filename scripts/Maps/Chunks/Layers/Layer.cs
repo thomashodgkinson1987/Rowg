@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Rowg.Maps.Chunks.Layers
 {
 
-    public abstract class Layer<T> : Node2D where T : TileView
+    public class Layer<T> : Node2D where T : TileView
     {
 
         #region Fields
@@ -33,11 +33,14 @@ namespace Rowg.Maps.Chunks.Layers
 
         public override void _Ready ()
         {
-            foreach (T tile in GetChildren())
+            foreach (object obj in GetChildren())
             {
-                int x = (int)tile.Position.x / StaticGameData.TileWidthInPixels;
-                int y = (int)tile.Position.y / StaticGameData.TileHeightInPixels;
-                AddTile(x, y, tile);
+                if (obj is T tile)
+                {
+                    int x = (int)tile.Position.x / StaticGameData.TileWidthInPixels;
+                    int y = (int)tile.Position.y / StaticGameData.TileHeightInPixels;
+                    AddTile(x, y, tile);
+                }
             }
         }
 

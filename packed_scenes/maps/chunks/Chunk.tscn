@@ -12,7 +12,8 @@
 script = ExtResource( 7 )
 
 [node name="Center" type="Position2D" parent="."]
-position = Vector2( 200, 200 )
+visible = false
+position = Vector2( 160, 160 )
 __meta__ = {
 "_edit_lock_": true
 }
